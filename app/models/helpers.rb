@@ -4,7 +4,7 @@ module Helpers
 	
 	module InstanceMethods
 		def slug
-			self.name.downcase.sub(/ /, '-')
+			self.name.downcase.gsub(/ /, '-') if self.name
 		end
 	end
 
